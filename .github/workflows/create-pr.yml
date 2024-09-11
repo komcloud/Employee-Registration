@@ -16,11 +16,6 @@ jobs:
     name: Submit PR
     runs-on: ubuntu-latest
     steps:
-      - name: Check fork
-        if: github.event.repository.fork == true
-        run: |
-          echo "This workflow must run on the parent repository"
-          exit 1
       - name: open-pull-request
         uses: fjogeleit/http-request-action@v1
         with:
